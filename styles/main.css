@@ -37,6 +37,7 @@
 
 /* VRSTVA PRO VAŠE STYLY */
 @layer design {
+    /* Buttons */
     .button {
         display: inline-block;
         background-color: var(--primary, teal);
@@ -49,26 +50,28 @@
     }
     .button:hover {
         text-decoration: underline;
-    }
-
-    .page__header {
-        background-image: url(../images/header-2560w.webp);
-        background-size: cover;
-        background-position: bottom left;
-        padding: 1em;
-        /* height: 80vh; */
-    }
-    .page__intro {
+        background-color: var(--black, black);
         color: var(--light, white);
     }
     .button--light {
         background-color: var(--light, white);
         color: var(--black, black);
     }
-    .button--light:hover {
-        background-color: var(--black, black);
-        color: var(--light, white);
+    /* Images */
+    .image-responsive {
+        display: block;
+        width: 100%;
     }
+
+    /* Header */
+    .page__header {
+        background-image: url(../images/header-2560w.webp);
+        background-size: cover;
+        background-position: top left;
+        padding: 1em;
+        height: 80vh; /* not accurate */
+    }
+    /* Header Logo */
     .page__logo-container {
         text-align: center;
     }
@@ -76,8 +79,8 @@
         display: inline-block;
         padding: 1em;
     }
-    .image-responsive {
-        display: block;
-        width: 100%;
+    /* Header Text Container */
+    .page__intro {
+        color: var(--light, white);
     }
 }
