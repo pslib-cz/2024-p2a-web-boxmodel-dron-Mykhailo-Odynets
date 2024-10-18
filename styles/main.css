@@ -18,7 +18,7 @@
     }
     .page__logo::before {
         content: "";
-        display: inline-block;
+        display: block;
         background: center / contain no-repeat transparent;
         /*
         background-position: center;
@@ -26,8 +26,8 @@
         background-repeat: no-repeat;
         */
         background-image: url("../images/logo.svg");
-        width: 2em;
-        height: 1em;
+        width: auto;
+        height: 100%;
         font-size: 1.5em;
     }
     .page__logo > span {
@@ -46,10 +46,11 @@
         border-radius: 0.5em;
         font-weight: 700;
         text-decoration: none;
-        transition: 0.3s;
+        transition: 0.1s;
     }
     .button:hover {
         text-decoration: underline;
+        text-decoration-thickness: .05em;
         background-color: var(--black, black);
         color: var(--light, white);
     }
@@ -62,6 +63,13 @@
         display: block;
         width: 100%;
     }
+    /* h3 */
+    .text-h3 {
+        font-size: 1.125em;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+
 
     /* Header */
     .page__header {
@@ -69,18 +77,47 @@
         background-size: cover;
         background-position: top left;
         padding: 1em;
-        height: 80vh; /* not accurate */
     }
     /* Header Logo */
-    .page__logo-container {
-        text-align: center;
-    }
     .page__logo {
-        display: inline-block;
+        display: block;
+        height: 2em;
+        aspect-ratio: 42 / 24;
         padding: 1em;
+        margin: 0 auto;
     }
     /* Header Text Container */
     .page__intro {
         color: var(--light, white);
+    }
+
+
+    /* Main */
+    .page__content {
+        padding: 1em;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .picture-box {
+        margin: 0;
+    }
+    .picture-box__caption {
+        font-size: 0.8em;
+        color: var(--gray, gray);
+        text-align: center;
+        margin-top: .75em;
+    }
+    .outline-box {
+        border: 3px solid var(--primary, aqua);
+        padding: 1em;
+        margin: 1em 0;
+    }
+    .list > li::marker {
+        color: var(--primary, aqua);
+    }
+    .product {
+        display: inline-block;
+        padding: 1em;
+        max-width: 24em;
     }
 }
