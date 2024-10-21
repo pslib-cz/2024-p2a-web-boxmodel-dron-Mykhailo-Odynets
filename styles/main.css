@@ -120,4 +120,35 @@
         padding: 1em;
         max-width: 24em;
     }
+    .black-box {
+        color: var(--light, white);
+        background-color: var(--gray);
+        text-align: center;
+        padding: 2em;
+        margin: 2em 0;
+    }
+    .black-box__title {
+        font-size: 3em;
+        font-weight: 700;
+        margin: 0.5em 0;
+    }
+    .gallery {
+        margin-bottom: 3em;
+    }
+    .gallery__block {}
+    .gallery__gallery-image {
+        display: inline-block;
+        max-width: 48%;
+    }
+
+    /* Footer */
+    .page__footer {
+        background-color: var(--gray);
+        padding: 2em;
+        text-align: center;
+    }
+    .page__footer__link {
+        color: var(--light);
+        text-decoration: none;
+    }
 }
