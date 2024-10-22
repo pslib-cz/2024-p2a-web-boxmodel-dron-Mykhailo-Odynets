@@ -132,10 +132,12 @@
         font-weight: 700;
         margin: 0.5em 0;
     }
+    .black-box__title__big {
+        font-size: 2em;
+    }
     .gallery {
         margin-bottom: 3em;
     }
-    .gallery__block {}
     .gallery__gallery-image {
         display: inline-block;
         max-width: 48%;
