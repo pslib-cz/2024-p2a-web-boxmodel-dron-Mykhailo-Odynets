@@ -98,6 +98,9 @@
         max-width: 960px;
         margin: 0 auto;
     }
+    .page__section {
+        margin: 2em 0;
+    }
     .picture-box {
         margin: 0;
     }
@@ -130,18 +133,30 @@
     .black-box__title {
         font-size: 3em;
         font-weight: 700;
-        margin: 0.5em 0;
+        margin: 0 0 0.5em 0;
     }
     .black-box__title__big {
         font-size: 2em;
     }
     .gallery {
-        margin-bottom: 3em;
+        /* margin-bottom: 3em; */
+        --indent: 0.5em;
+        margin: calc(-1 * var(--indent));
     }
-    .gallery__gallery-image {
-        display: inline-block;
-        max-width: 48%;
+    .gallery__item {
+        display: block;
+        margin: var(--indent);
     }
+    @media (min-width: 768px) {
+        .gallery__item {
+            display: inline-block;
+            width: calc(50% - 2 * var(--indent));
+        }
+        .gallery__item--100w {
+            width: calc(100% - 2 * var(--indent));
+        }
+    }
+    
 
     /* Footer */
     .page__footer {
